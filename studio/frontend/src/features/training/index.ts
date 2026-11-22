@@ -11,6 +11,13 @@ export {
   shouldShowTrainingView,
   useTrainingRuntimeStore,
 } from "./stores/training-runtime-store";
+export { useScheduledTrainingStore } from "./stores/scheduled-training-store";
+export {
+  activeTrainingSchedule,
+  latestTrainingScheduleProblem,
+  trainingScheduleDraftValid,
+} from "./lib/scheduled-training";
+export { useScheduledTrainingLifecycle } from "./hooks/use-scheduled-training";
 export { useTrainingActions } from "./hooks/use-training-actions";
 
 export {
@@ -59,6 +66,7 @@ export type {
   LoraVariant,
   TrainingConfigState,
 } from "./types/config";
+export type { TrainingSchedule } from "./types/api";
 export { getModelConfig, listLocalModels } from "./api/models-api";
 export type {
   DecisionCheckpoint,
